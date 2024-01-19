@@ -1,3 +1,5 @@
+![XR2Learn](https://raw.githubusercontent.com/XR2Learn/.github/5c0fada6136915b389c1cd2151a0dd2cfc4a5aac/images/XR2Learn%20logo.png)
+
 # XR2Learn Unity App Example
 This is an example app of how to connect to Redis in Unity (to connect Beacon Apps to Enablers).
 
