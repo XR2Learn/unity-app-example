@@ -4,6 +4,9 @@ This is an example app of how to connect to Redis in Unity (to connect Beacon Ap
 ![Screenshot](https://github.com/um-xr2learn-enablers/XR2Learn-Unity-App-Example/blob/master/screen-test.png?raw=true)
 (Screenshot of the Unity application)
 
+![Screenshot](https://github.com/um-xr2learn-enablers/XR2Learn-Unity-App-Example/blob/master/screen-test.png?raw=true)
+(Screenshot)
+
 # Installing Redis Lib
 ## Installing NuGets in Unity
 *[Docs on installation](https://github.com/GlitchEnzo/NuGetForUnity?tab=readme-ov-file#unity-20193-or-newer)*
