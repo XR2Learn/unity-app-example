@@ -1,5 +1,10 @@
+![XR2Learn](https://raw.githubusercontent.com/XR2Learn/.github/5c0fada6136915b389c1cd2151a0dd2cfc4a5aac/images/XR2Learn%20logo.png)
+
 # XR2Learn Unity App Example
-This is a example app of how to connect to redis in Unity.
+This is an example app of how to connect to Redis in Unity (to connect Beacon Apps to Enablers).
+
+![Screenshot](https://github.com/um-xr2learn-enablers/XR2Learn-Unity-App-Example/blob/master/screen-test.png?raw=true)
+(Screenshot of the Unity application)
 
 # Installing Redis Lib
 ## Installing NuGets in Unity
@@ -9,24 +14,27 @@ This is a example app of how to connect to redis in Unity.
 
 In the project, go to `Window->Package Manager->[+]->Add Package From git URL`.
 
-and paste the url for the NuGetForUnity: `https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity`
+and paste the URL for the NuGetForUnity: `https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity`
 
 ## Install NRedisStack NuGets
 Go to `NuGet For Unity->Online (tab)` and search for `NRedisStack`. Select this package and click in `Install All Selected`.
 
 # Redis Connection
-The `UIExample.cs` script contains a script with a simple example for how to connect with Redis, as both a publisher and subscriber, and how to translate the redis messages into Unity internal variables.
+The `UIExample.cs` script contains a script with a simple example of how to connect with Redis as both a publisher and subscriber and how to translate the Redis messages into Unity internal variables.
 
 ## Important Point
-Running complex unity code in the method used for handling the subscribed Redis messages can be complicated to debug in Unity (i.e. `ProcessMessageNextActivityLevel` in the `UIExample.cs`). It is best for the methods that handle the subscribed messages to only update primitive variables, and have the `update` or other standard Unity method update more complex components based on the primitive variables just populated.
+Running complex unity code in the method used for handling the subscribed Redis messages can be complicated to debug in Unity (i.e. `ProcessMessageNextActivityLevel` in the `UIExample.cs`). It is best for the methods that handle the subscribed messages to only update primitive variables and have the `update` or other standard Unity method update more complex components based on the primitive variables just populated.
 
 
 # Running the App
- - Set the redis connection string to the `ip:port` where the redis instance is running.
+ - Set the Redis connection string to the `ip:port` where the Redis instance is running.
 
- - Then click in `Connect`.
- - Select `User Level`, and `Activity Level`
+ - Then click on `Connect`.
+ - Select `User Level` and `Activity Level`
  - Click on `Start Activity` to publish the message that will start an activity
  - Click on `Stop activity` to publish the message that will stop the current activity
- - You will be able to see the Next sugested activity level on the Dropdown to the right.
- - Clicking in `Disconnect` will end the connection the redis instance.
+ - You will be able to see the Next suggested activity level on the Dropdown to the right.
+ - Clicking on `Disconnect` will end the connection to the Redis instance.
+
+# Builds
+- [Build Links](https://drive.google.com/drive/folders/1y3j8F7yACtt1lwrk7ARYgFjxEEVgG4f6?usp=drive_link)
