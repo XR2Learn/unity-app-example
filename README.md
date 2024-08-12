@@ -72,6 +72,7 @@ We are making available a compiled build that you can download and run to see th
         'user_level': user_level,
         'activity_level': activity_level
     }`
+
 ---
 
 **Channel**: `stop_activity`
