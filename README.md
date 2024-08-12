@@ -40,4 +40,4 @@ Running complex unity code in the method used for handling the subscribed Redis 
  - Clicking on `Disconnect` will end the connection to the Redis instance.
 
 # Builds
-- [Build Links](https://drive.google.com/drive/folders/1y3j8F7yACtt1lwrk7ARYgFjxEEVgG4f6?usp=drive_link)
+- [Builds Link](https://drive.google.com/drive/folders/1y3j8F7yACtt1lwrk7ARYgFjxEEVgG4f6?usp=drive_link) (Currently Linux x86_64 architecture)
