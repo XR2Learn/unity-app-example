@@ -1,16 +1,22 @@
-![XR2Learn](https://raw.githubusercontent.com/XR2Learn/.github/5c0fada6136915b389c1cd2151a0dd2cfc4a5aac/images/XR2Learn%20logo.png)
+# XR2Learn Unity App Example (Integration Personalization Enablers and Unity Applications)
 
-# XR2Learn Unity App Example
-This is an example app of how to connect to Redis in Unity (to connect Beacon Apps to Enablers).
+This is an example app of how to communicate a Unity Application with Personalization Enablers.
+Personalization Enablers and Unity application to communicate by exchanging messages using Pub/Sub protocol.
 
-![Screenshot](https://github.com/um-xr2learn-enablers/XR2Learn-Unity-App-Example/blob/master/screen-test.png?raw=true)
+Redis is used as a message broker for the message exchange. Thus, this example includes:
+- Code to connect to Redis in Unity, 
+- Code to create a publisher and a subscriber in Unity
+- Code with the sending and receiving message formats to communicate with the Personalization Enablers. 
+
+This example app includes a simple graphic interface as depicted below. 
+
+![Screenshot](screen-test.png?raw=true)
 (Screenshot of the Unity application)
 
-![Screenshot](https://github.com/um-xr2learn-enablers/XR2Learn-Unity-App-Example/blob/master/screen-test.png?raw=true)
-(Screenshot)
-
 # Installing Redis Lib
+
 ## Installing NuGets in Unity
+
 *[Docs on installation](https://github.com/GlitchEnzo/NuGetForUnity?tab=readme-ov-file#unity-20193-or-newer)*
 
 ## Overview install instructions:
@@ -20,24 +26,34 @@ In the project, go to `Window->Package Manager->[+]->Add Package From git URL`.
 and paste the url for the NuGetForUnity: `https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity`
 
 ## Install NRedisStack NuGets
-Go to `NuGet For Unity->Online (tab)` and search for `NRedisStack`. Select this package and click in `Install All Selected`.
+
+Go to `NuGet For Unity->Online (tab)` and search for `NRedisStack`. Select this package and click
+in `Install All Selected`.
 
 # Redis Connection
-The `UIExample.cs` script contains a script with a simple example of how to connect with Redis as both a publisher and subscriber and how to translate the Redis messages into Unity internal variables.
+
+The `UIExample.cs` script contains a script with a simple example of how to connect with Redis as both a publisher and
+subscriber and how to translate the Redis messages into Unity internal variables.
 
 ## Important Point
-Running complex unity code in the method used for handling the subscribed Redis messages can be complicated to debug in Unity (i.e. `ProcessMessageNextActivityLevel` in the `UIExample.cs`). It is best for the methods that handle the subscribed messages to only update primitive variables and have the `update` or other standard Unity method update more complex components based on the primitive variables just populated.
 
+Running complex unity code in the method used for handling the subscribed Redis messages can be complicated to debug in
+Unity (i.e. `ProcessMessageNextActivityLevel` in the `UIExample.cs`). It is best for the methods that handle the
+subscribed messages to only update primitive variables and have the `update` or other standard Unity method update more
+complex components based on the primitive variables just populated.
 
 # Running the App
- - Set the Redis connection string to the `ip:port` where the Redis instance is running.
 
- - Then click on `Connect`.
- - Select `User Level` and `Activity Level`
- - Click on `Start Activity` to publish the message that will start an activity
- - Click on `Stop activity` to publish the message that will stop the current activity
- - You will be able to see the Next suggested activity level on the Dropdown to the right.
- - Clicking on `Disconnect` will end the connection to the Redis instance.
+- Set the Redis connection string to the `ip:port` where the Redis instance is running.
+
+- Then click on `Connect`.
+- Select `User Level` and `Activity Level`
+- Click on `Start Activity` to publish the message that will start an activity
+- Click on `Stop activity` to publish the message that will stop the current activity
+- You will be able to see the Next suggested activity level on the Dropdown to the right.
+- Clicking on `Disconnect` will end the connection to the Redis instance.
 
 # Builds
-- [Builds Link](https://drive.google.com/drive/folders/1y3j8F7yACtt1lwrk7ARYgFjxEEVgG4f6?usp=drive_link) (Currently Linux x86_64 architecture)
+
+- [Builds Link](https://drive.google.com/drive/folders/1y3j8F7yACtt1lwrk7ARYgFjxEEVgG4f6?usp=drive_link) (Currently
+  Linux x86_64 architecture)
