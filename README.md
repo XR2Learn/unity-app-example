@@ -12,7 +12,7 @@ This is an example app of how to connect to Redis in Unity (to connect Beacon Ap
 
 In the project, go to `Window->Package Manager->[+]->Add Package From git URL`.
 
-and paste the URL for the NuGetForUnity: `https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity`
+and paste the url for the NuGetForUnity: `https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity`
 
 ## Install NRedisStack NuGets
 Go to `NuGet For Unity->Online (tab)` and search for `NRedisStack`. Select this package and click in `Install All Selected`.
