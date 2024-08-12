@@ -61,6 +61,38 @@ We are making available a compiled build that you can download and run to see th
 - [Builds Link](https://drive.google.com/drive/folders/1y3j8F7yACtt1lwrk7ARYgFjxEEVgG4f6?usp=drive_link) (Currently
   Linux x86_64 architecture)
 
+## Message Formats
+####  Unity as publisher:
+
+**Channel**: `start_activity`
+
+**Message**: 
+    `{
+        'id': id_activity, 
+        'user_level': user_level,
+        'activity_level': activity_level
+    }`
+---
+
+**Channel**: `stop_activity`
+
+**Message**: 
+    `{
+        'id': 0,
+        'timestamp': Date.now()
+        }`
+
+---
+#### Unity as subscriber:
+
+**Channel**: `next_activity_level`
+
+**Message**: 
+      `{
+        'id': id_previous_activity,
+        'next_activity_level': next_activity_level (int values, 0, 1 or 2)
+        }`
+
 ## License
 
 Copyright © 2024, Maastricht University
